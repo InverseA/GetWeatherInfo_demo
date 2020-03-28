@@ -32,6 +32,8 @@ namespace GetWeatherInfo_demo
         public string Apparent_temperature { get; set; }
         public string RainProb_6Hour { get; set; }
         public string Humidity { get; set; }
+        public string WeatherCode { get; set; }
+        public string WeatherDescription { get; set; }
 
     }
 
@@ -89,6 +91,8 @@ namespace GetWeatherInfo_demo
                 _generalResult.Apparent_temperature = result["weatherElement"][8]["time"][0]["elementValue"]["value"].ToString();
                 _generalResult.RainProb_6Hour = result["weatherElement"][3]["time"][0]["elementValue"]["value"].ToString();
                 _generalResult.Humidity = result["weatherElement"][2]["time"][0]["elementValue"]["value"].ToString();
+                _generalResult.WeatherCode = result["weatherElement"][9]["time"][0]["elementValue"][1]["value"].ToString();
+                _generalResult.WeatherDescription = result["weatherElement"][9]["time"][0]["elementValue"][0]["value"].ToString();
                 General_list.Add(_generalResult);
             }
 
@@ -104,6 +108,8 @@ namespace GetWeatherInfo_demo
                     _ds.Forecast_3Hour = _cell.Temperature_3Hr_Later;
                     _ds.RainProb_6Hour = _cell.RainProb_6Hour;
                     _ds.Humidity = _cell.Humidity;
+                    _ds.WeatherCode = _cell.WeatherCode;
+                    _ds.WeatherDescription = _cell.WeatherDescription;
                     for (int i = 0; i < RainAccumulate_list.Count; i++)
                     {
                         string _temp = RainAccumulate_list[i].locationName + "區";

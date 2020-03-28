@@ -41,7 +41,9 @@ namespace GetWeatherInfo_demo
                 Console.WriteLine("3小時溫度預測：" + _cell.Forecast_3Hour);
                 Console.WriteLine("6小時內降雨機率：" + _cell.RainProb_6Hour);
                 Console.WriteLine("日出時間：" + _cell.SunRiseTime);
-                Console.WriteLine("日落時間" + _cell.SunSetTime);
+                Console.WriteLine("日落時間：" + _cell.SunSetTime);
+                Console.WriteLine("天氣描述代碼：" + _cell.WeatherCode);
+                Console.WriteLine("天氣描述：" + _cell.WeatherDescription);
             }
             
         }

@@ -17,6 +17,8 @@ namespace GetWeatherInfo_demo
         public string Rain_Hour { get; set; }              //時累計雨量
         public string SunRiseTime { get; set; }            //日出時間
         public string SunSetTime { get; set; }             //日落時間
+        public string WeatherCode { get; set; }            //天氣描述代碼
+        public string WeatherDescription { get; set; }     //天氣描述
         
     }
 }
